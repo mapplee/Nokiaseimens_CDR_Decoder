@@ -1,0 +1,18 @@
+c:\users\munna\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+c:\users\munna\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+c:\users\munna\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+c:\users\munna\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ProjNET.dll
+c:\users\munna\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ProjNET.xml
+c:\users\munna\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+c:\users\munna\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+c:\users\munna\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\telcobright\Downloads\Nokia\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\telcobright\Downloads\Nokia\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\telcobright\Downloads\Nokia\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\telcobright\Downloads\Nokia\ConsoleApplication1\ConsoleApplication1\bin\Debug\ProjNET.dll
+C:\Users\telcobright\Downloads\Nokia\ConsoleApplication1\ConsoleApplication1\bin\Debug\ProjNET.xml
+C:\Users\telcobright\Downloads\Nokia\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.AssemblyReference.cache
+C:\Users\telcobright\Downloads\Nokia\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+C:\Users\telcobright\Downloads\Nokia\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CopyComplete
+C:\Users\telcobright\Downloads\Nokia\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\telcobright\Downloads\Nokia\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
