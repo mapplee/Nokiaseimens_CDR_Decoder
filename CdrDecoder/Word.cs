@@ -94,7 +94,9 @@ namespace CdrDecoder
 
         public TimeFieldDate(List<byte> timeSpan,List<byte> year)
         {
+            // string yearString = new HexByte(year[0]).ToString() + new HexByte(year[1]).ToString();
             string yearString = new HexByte(year[0]).ToString() + new HexByte(year[1]).ToString();
+
             int month = Convert.ToInt16(new HexByte(timeSpan[4]).ToString());
             int day = Convert.ToInt16(new HexByte(timeSpan[3]).ToString());
             int hour = Convert.ToInt16(new HexByte(timeSpan[2]).ToString());

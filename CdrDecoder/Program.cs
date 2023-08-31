@@ -24,7 +24,7 @@ namespace CdrDecoder
             //Console.WriteLine("int value of hexDword A0 00 02 00 = " + bcdDword.getDecimal());
 
 
-            Nokiaseimens.Decode("CF7058.DAT");
+            Nokiaseimens.Decode("CF5648.DAT");
             Console.Read();
         }
     }

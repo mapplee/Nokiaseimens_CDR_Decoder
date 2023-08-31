@@ -15,3 +15,10 @@ C:\Users\telcobright\Downloads\Nokia\ConsoleApplication1\CdrDecoder\obj\Debug\Cd
 C:\Users\telcobright\Downloads\Nokia\ConsoleApplication1\CdrDecoder\obj\Debug\CdrDecoder.csproj.CoreCompileInputs.cache
 C:\Users\telcobright\Downloads\Nokia\ConsoleApplication1\CdrDecoder\obj\Debug\CdrDecoder.exe
 C:\Users\telcobright\Downloads\Nokia\ConsoleApplication1\CdrDecoder\obj\Debug\CdrDecoder.pdb
+D:\Nokiaseimens_CDR_Decoder\CdrDecoder\obj\Debug\CdrDecoder.exe
+D:\Nokiaseimens_CDR_Decoder\CdrDecoder\obj\Debug\CdrDecoder.pdb
+D:\Nokiaseimens_CDR_Decoder\CdrDecoder\bin\Debug\CdrDecoder.exe.config
+D:\Nokiaseimens_CDR_Decoder\CdrDecoder\bin\Debug\CdrDecoder.exe
+D:\Nokiaseimens_CDR_Decoder\CdrDecoder\bin\Debug\CdrDecoder.pdb
+D:\Nokiaseimens_CDR_Decoder\CdrDecoder\obj\Debug\CdrDecoder.csproj.AssemblyReference.cache
+D:\Nokiaseimens_CDR_Decoder\CdrDecoder\obj\Debug\CdrDecoder.csproj.CoreCompileInputs.cache

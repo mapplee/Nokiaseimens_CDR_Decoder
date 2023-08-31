@@ -3,10 +3,18 @@ namespace CdrDecoder
 {
     internal class Nokia
     {
+
+        public enum CdrType
+        {
+           Ptc,
+           Poc
+        }
+
         public enum DataType
         {
             TimeFieldDate,
             HexByte,
+            HexByteRev,
             HexWord,
             HexDword,
             BcdByte,
@@ -16,6 +24,7 @@ namespace CdrDecoder
             BcdBcdHex,
             BcdBcdWord,
             HexWordHexbyte,
+            Unknown
         }
         public static List<string> FieldList = new List<string>()
         {
@@ -80,8 +89,8 @@ namespace CdrDecoder
           new Dictionary<string, Nokiaseimens.FieldInfo>()
           {
                { "record_length", new Nokiaseimens.FieldInfo(0, 2,Nokia.DataType.HexWord )},
-               { "record_type", new Nokiaseimens.FieldInfo(2, 1,Nokia.DataType.BcdByte) },
-               { "record_number", new Nokiaseimens.FieldInfo(3, 4,Nokia.DataType.BcdDword)},
+               { "record_type", new Nokiaseimens.FieldInfo(2, 1,Nokia.DataType.HexByteRev) },
+               { "record_number", new Nokiaseimens.FieldInfo(3, 4,Nokia.DataType.HexByteRev)},
                { "record_status", new Nokiaseimens.FieldInfo(7, 1, Nokia.DataType.HexByte) },
                { "check_sum", new Nokiaseimens.FieldInfo(8, 2, Nokia.DataType.HexWord) },
                { "call_reference", new Nokiaseimens.FieldInfo(10, 5,Nokia.DataType.WordWordByte ) },
@@ -133,15 +142,15 @@ namespace CdrDecoder
                { "out_circuit_group_name", new Nokiaseimens.FieldInfo(162, 2,DataType.HexByte) },
                { "in_circuit", new Nokiaseimens.FieldInfo(164, 2,DataType.HexByte) },
                { "in_circuit_group", new Nokiaseimens.FieldInfo(166, 6,DataType.HexByte) },
-                 { "oaz_duration_ten_ms", new Nokiaseimens.FieldInfo(172, 8,DataType.HexByte) }
+               { "oaz_duration_ten_ms", new Nokiaseimens.FieldInfo(172, 8,DataType.HexByte) }
 
           };
         public static Dictionary<string, Nokiaseimens.FieldInfo> PtcFieldsDetails =
   new Dictionary<string, Nokiaseimens.FieldInfo>()
   {
                { "record_length", new Nokiaseimens.FieldInfo(0, 2,DataType.HexWord )},
-               { "record_type", new Nokiaseimens.FieldInfo(2, 1,DataType.BcdByte) },
-               { "record_number", new Nokiaseimens.FieldInfo(3, 4,DataType.BcdByte)},
+               { "record_type", new Nokiaseimens.FieldInfo(2, 1,DataType.HexByteRev) },
+               { "record_number", new Nokiaseimens.FieldInfo(3, 4,DataType.HexByteRev)},
                { "record_status", new Nokiaseimens.FieldInfo(7, 1, DataType.HexByte) },
                { "check_sum", new Nokiaseimens.FieldInfo(8, 2, DataType.HexWord) },
                { "call_reference", new Nokiaseimens.FieldInfo(10, 5,DataType.WordWordByte ) },

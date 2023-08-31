@@ -41,12 +41,12 @@
     <Compile Include="BcdBytes.cs" />
     <Compile Include="DataDumper.cs" />
     <Compile Include="PocDecoder.cs" />
-    <Compile Include="PtcDecoder.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Decoder.cs" />
     <Compile Include="Nokia.cs" />
     <Compile Include="HexByte.cs" />
     <Compile Include="Word.cs" />
     <Compile Include="Nokiaseimens.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
