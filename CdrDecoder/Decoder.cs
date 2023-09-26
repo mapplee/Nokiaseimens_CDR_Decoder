@@ -32,32 +32,6 @@ namespace CdrDecoder
                                 totalSkip += TotalSkip(fileData, tempOfset);
                             }
 
-
-
-                            // if (f == "calling_number")
-                            // {
-                            //     if (records[10] == "05")
-                            //     {
-                            //         tempOfset = tempOfset + length;
-                            //         while (fileData[tempOfset] == 255)
-                            //         {
-                            //             tempOfset++;
-                            //             totalSkip++;
-                            //             length++;
-                            //         }
-                            //     }
-                            // }
-                            // if(records.Count > 14 && !skiped)
-                            // {
-                            //     if (records[10] == "05")
-                            //     {
-                            //         totalSkip -= 2;
-                            //         skiped = true;
-                            //     }
-                            //     
-                            // }
-
-                            
                         }
                         break;
                     case Nokia.CdrType.Poc:
@@ -71,41 +45,6 @@ namespace CdrDecoder
                             {
                                 totalSkip += TotalSkip(fileData, tempOfset);
                             }
-                            // if (f == "calling_number")
-                            // {
-                            //     if (records[10] == "05")
-                            //     {
-                            //         tempOfset = tempOfset + length  ;
-                            //         while (fileData[tempOfset] == 255)
-                            //         {
-                            //             tempOfset++;
-                            //             totalSkip++;
-                            //             length++;
-                            //         }
-                            //     }
-                            // }
-                            // if (records.Count > 14 && !skiped)
-                            // {
-                            //     if (records[10] == "05")
-                            //     {
-                            //         totalSkip -= 2;
-                            //         skiped = true;
-                            //     }
-                            // }
-
-                            // if (f == "called_number")
-                            // {
-                            //     if (records[12] == "05")
-                            //     {
-                            //         tempOfset = tempOfset + length ;
-                            //         while (fileData[tempOfset] == 255)
-                            //         {
-                            //             tempOfset++;
-                            //             totalSkip++;
-                            //             length++;
-                            //         }
-                            //     }
-                            // }
                         }
                         break;
 
@@ -117,7 +56,7 @@ namespace CdrDecoder
                 } 
                 List<byte> recordBytes = fileData.GetRange(offset + (totalSkip), length);
 
-                string recordData = getRecordData(dataType, recordBytes);
+                string recordData = GetRecordData(dataType, recordBytes);
                 records.Add(recordData);
                 if (f == "calling_number")
                 {
@@ -134,7 +73,7 @@ namespace CdrDecoder
             return records;
         }
 
-        private static string getRecordData(Nokia.DataType dataType, List<byte> recordBytes)
+        private static string GetRecordData(Nokia.DataType dataType, List<byte> recordBytes)
         {
             string record = "";
             switch (dataType)
@@ -250,6 +189,23 @@ namespace CdrDecoder
                         });
                         record = string.Join("", rs);
                     }
+                    break;
+                case Nokia.DataType.BcdByteRev:
+                {
+                    Stack<char> myStack = new Stack<char>();
+                        List<char> rs = new List<char>();
+                    recordBytes.ForEach(b =>
+                    {
+                       var s = b.ToString().Reverse();
+                        foreach (var c in new BcdBytes(b).ToString().Reverse())
+                        {
+                            rs.Add(c);
+                            myStack.Push(c);
+                        }
+                            
+                    });
+                    record = string.Join("", myStack);
+                }
                     break;
 
 

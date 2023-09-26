@@ -18,6 +18,8 @@ namespace CdrDecoder
             HexWord,
             HexDword,
             BcdByte,
+            BcdByteRev,
+
             BcdWord,
             BcdDword,
             WordWordByte,
@@ -111,7 +113,7 @@ namespace CdrDecoder
                { "call_type", new Nokiaseimens.FieldInfo(83, 1, Nokia.DataType.HexByte) },
                { "ticket_type", new Nokiaseimens.FieldInfo(84, 1,Nokia.DataType.HexByte) }, //Type of CDR POC/PTC 
                { "oaz_chrg_type", new Nokiaseimens.FieldInfo(85, 1,Nokia.DataType.HexByte) },
-               { "oaz_duration", new Nokiaseimens.FieldInfo(86, 3,Nokia.DataType.HexWordHexbyte) },
+               { "oaz_duration", new Nokiaseimens.FieldInfo(86, 3,Nokia.DataType.BcdByteRev) },
                { "oaz_tariff_class", new Nokiaseimens.FieldInfo(89, 3,DataType.HexWordHexbyte) },
                { "oaz_pulses", new Nokiaseimens.FieldInfo(92, 2,DataType.BcdWord) },
                { "called_msrn_ton", new Nokiaseimens.FieldInfo(94, 1,DataType.HexByte) },
@@ -171,7 +173,7 @@ namespace CdrDecoder
                { "call_type", new Nokiaseimens.FieldInfo(83, 1, DataType.HexByte) },
                { "ticket_type", new Nokiaseimens.FieldInfo(84, 1,DataType.HexByte) }, //Type of CDR POC/PTC 
                { "oaz_chrg_type", new Nokiaseimens.FieldInfo(85, 1,DataType.HexByte) },
-               { "oaz_duration", new Nokiaseimens.FieldInfo(86, 3,DataType.HexByte) },
+               { "oaz_duration", new Nokiaseimens.FieldInfo(86, 3,DataType.BcdByteRev) },
                { "oaz_tariff_class", new Nokiaseimens.FieldInfo(89, 3,DataType.HexWordHexbyte) },
                { "oaz_pulses", new Nokiaseimens.FieldInfo(92, 2,DataType.BcdWord) },
                { "called_msrn_ton", new Nokiaseimens.FieldInfo(94, 1,DataType.HexByte) },
@@ -202,7 +204,7 @@ namespace CdrDecoder
               { "out_circuit_group_name", new Nokiaseimens.FieldInfo(161, 8,DataType.HexByte) },
               { "in_circuit", new Nokiaseimens.FieldInfo(169, 2,DataType.BcdWord) },
               { "in_circuit_group", new Nokiaseimens.FieldInfo(171, 2,DataType.BcdWord) },
-              { "oaz_duration_ten_ms", new Nokiaseimens.FieldInfo(173, 2,DataType.BcdByte) }
+              { "oaz_duration_ten_ms", new Nokiaseimens.FieldInfo(173, 4,DataType.BcdByteRev) }
 
   };
     }
