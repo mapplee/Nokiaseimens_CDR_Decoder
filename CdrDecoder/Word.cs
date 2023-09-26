@@ -86,23 +86,31 @@ namespace CdrDecoder
     }
     // 5 BCD bytes + 1 BCD word:
 
-    public class TimeFieldDate
+    public class TimeFieldData
     {
         private BcdBytes[] TimeSpan { get; set; } = new BcdBytes[5];
         public DateTime dt { get; set; }
         private HexWord Year { get; set; }
 
-        public TimeFieldDate(List<byte> timeSpan,List<byte> year)
+        public TimeFieldData(List<byte> timeSpan,List<byte> year)
         {
-            // string yearString = new HexByte(year[0]).ToString() + new HexByte(year[1]).ToString();
-            string yearString = new HexByte(year[0]).ToString() + new HexByte(year[1]).ToString();
+            try
+            {
+                string yearString = new HexByte(year[1]).ToString() + new HexByte(year[0]).ToString();
 
-            int month = Convert.ToInt16(new HexByte(timeSpan[4]).ToString());
-            int day = Convert.ToInt16(new HexByte(timeSpan[3]).ToString());
-            int hour = Convert.ToInt16(new HexByte(timeSpan[2]).ToString());
-            int minute = Convert.ToInt16(new HexByte(timeSpan[1]).ToString());
-            int second = Convert.ToInt16(new HexByte(timeSpan[0]).ToString());
-            this.dt = new DateTime(Convert.ToInt32(yearString), month, day, hour, minute, second);
+                int month = Convert.ToInt16(new HexByte(timeSpan[4]).ToString());
+                int day = Convert.ToInt16(new HexByte(timeSpan[3]).ToString());
+                int hour = Convert.ToInt16(new HexByte(timeSpan[2]).ToString());
+                int minute = Convert.ToInt16(new HexByte(timeSpan[1]).ToString());
+                int second = Convert.ToInt16(new HexByte(timeSpan[0]).ToString());
+                this.dt = new DateTime(Convert.ToInt32(yearString), month, day, hour, minute, second);
+            }
+            catch (Exception e)
+            {
+                // Console.WriteLine(e);
+                // throw;
+            }
+           
             
         }
     }

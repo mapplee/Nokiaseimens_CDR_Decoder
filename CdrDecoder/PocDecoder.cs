@@ -117,7 +117,7 @@ namespace CdrDecoder
 
                             List<byte> year = new List<byte>(recordBytes.Skip(5).Take(2));
 
-                            TimeFieldDate td = new TimeFieldDate(new List<byte>(recordBytes.Take(5)), year);
+                            TimeFieldData td = new TimeFieldData(new List<byte>(recordBytes.Take(5)), year);
                             sum += length;
                             records.Add(string.Join("", td.dt.ToString()));
                             // Console.WriteLine("Get " + f.ToString() + " : " + td.dt.ToString() + " Starting pos: " + offset + " len: " + length + " Byte sum : " + sum);
